@@ -1,0 +1,197 @@
+/**
+ * Admin Styles for Auto Tag Interlink Plugin
+ *
+ * @package AutoTagInterlink
+ */
+
+/* Settings page container */
+.ati-settings-wrap {
+	margin: 20px 20px 0 0;
+}
+
+.ati-settings-container {
+	display: flex;
+	gap: 20px;
+	margin-top: 20px;
+}
+
+.ati-settings-main {
+	flex: 1;
+	max-width: 800px;
+}
+
+.ati-settings-sidebar {
+	width: 300px;
+	flex-shrink: 0;
+}
+
+/* Sidebar boxes */
+.ati-sidebar-box {
+	background: #fff;
+	border: 1px solid #ccd0d4;
+	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.04);
+	padding: 15px;
+	margin-bottom: 20px;
+}
+
+.ati-sidebar-box h3 {
+	margin-top: 0;
+	margin-bottom: 15px;
+	font-size: 14px;
+	font-weight: 600;
+	border-bottom: 1px solid #eee;
+	padding-bottom: 10px;
+}
+
+.ati-sidebar-box ol {
+	margin: 0;
+	padding-left: 20px;
+}
+
+.ati-sidebar-box li {
+	margin-bottom: 8px;
+	line-height: 1.5;
+}
+
+.ati-sidebar-box p {
+	margin: 8px 0;
+	line-height: 1.6;
+}
+
+/* Status indicators */
+.ati-status-active {
+	color: #46b450;
+	font-weight: 600;
+}
+
+.ati-status-inactive {
+	color: #dc3232;
+	font-weight: 600;
+}
+
+/* Form styling improvements */
+.form-table th {
+	width: 200px;
+	padding: 15px 10px 15px 0;
+}
+
+.form-table td {
+	padding: 15px 10px;
+}
+
+/* Cache button styling */
+#ati-clear-cache {
+	margin-top: 10px;
+}
+
+#ati-cache-message {
+	display: inline-block;
+	vertical-align: middle;
+	transition: opacity 0.3s ease;
+}
+
+#ati-cache-message.success {
+	color: #46b450;
+}
+
+#ati-cache-message.error {
+	color: #dc3232;
+}
+
+/* Settings sections */
+.ati-settings-wrap h2 {
+	border-bottom: 2px solid #0073aa;
+	padding-bottom: 8px;
+	margin-bottom: 20px;
+	color: #23282d;
+}
+
+/* Post types checkboxes */
+.form-table label[style*="display: block"] {
+	margin-bottom: 8px;
+}
+
+.form-table label[style*="display: block"] input[type="checkbox"] {
+	margin-right: 5px;
+}
+
+/* Description text */
+.description {
+	color: #646970;
+	font-style: italic;
+	margin-top: 5px;
+}
+
+/* Responsive design */
+@media (max-width: 1024px) {
+	.ati-settings-container {
+		flex-direction: column;
+	}
+
+	.ati-settings-sidebar {
+		width: 100%;
+		max-width: 800px;
+	}
+}
+
+@media (max-width: 782px) {
+	.ati-settings-wrap {
+		margin: 10px 10px 0 0;
+	}
+
+	.ati-sidebar-box {
+		padding: 12px;
+	}
+
+	.form-table th,
+	.form-table td {
+		display: block;
+		width: 100%;
+		padding: 10px 0;
+	}
+}
+
+/* Loading spinner for cache button */
+#ati-clear-cache.loading::before {
+	content: "";
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+	margin-right: 8px;
+	border: 2px solid #f3f3f3;
+	border-top: 2px solid #555;
+	border-radius: 50%;
+	animation: ati-spin 1s linear infinite;
+	vertical-align: middle;
+}
+
+@keyframes ati-spin {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+/* Notices */
+.ati-notice {
+	padding: 12px;
+	margin: 15px 0;
+	border-left: 4px solid;
+}
+
+.ati-notice-success {
+	background: #ecf7ed;
+	border-color: #46b450;
+}
+
+.ati-notice-error {
+	background: #fceded;
+	border-color: #dc3232;
+}
+
+.ati-notice-info {
+	background: #e5f5fa;
+	border-color: #00a0d2;
+}
